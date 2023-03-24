@@ -48,7 +48,7 @@ const resolvers = {
                         { $addToSet: { savedBooks: bookData } },
                         { new: true },
                     )
-                    .populate("books");
+                    .populate('books');
                 return updatedUser;
             };
             throw new AuthenticationError('You need to be logged in to save books!');
